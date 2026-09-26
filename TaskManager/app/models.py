@@ -6,14 +6,6 @@ from typing import Optional
 from pydantic import BaseModel, Field
 
 
-class GenerateTextRequest(BaseModel):
-    prompt: str = Field(min_length=1, max_length=8000)
-
-
-class GenerateTextResponse(BaseModel):
-    result: str
-
-
 class TaskCreate(BaseModel):
     title: str = Field(min_length=3, max_length=100)
     description: Optional[str] = None

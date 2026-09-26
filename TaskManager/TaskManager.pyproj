@@ -11,11 +11,21 @@
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>TaskManager</Name>
-    <RootNamespace>TakManager</RootNamespace>
+    <RootNamespace>TaskManager</RootNamespace>
     <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
     <IsWindowsApplication>False</IsWindowsApplication>
-    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <LaunchProvider>Web launcher</LaunchProvider>
     <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+    <WebBrowserUrl>
+    </WebBrowserUrl>
+    <WebBrowserPort>
+    </WebBrowserPort>
+    <PythonRunWebServerCommand>uvicorn</PythonRunWebServerCommand>
+    <PythonDebugWebServerCommand>uvicorn</PythonDebugWebServerCommand>
+    <PythonRunWebServerCommandType>module</PythonRunWebServerCommandType>
+    <PythonDebugWebServerCommandType>module</PythonDebugWebServerCommandType>
+    <PythonRunWebServerCommandArguments>app.main:app --app-dir ./ --reload</PythonRunWebServerCommandArguments>
+    <PythonDebugWebServerCommandArguments>app.main:app --app-dir ./ --reload</PythonDebugWebServerCommandArguments>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -54,6 +64,7 @@
     </Interpreter>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="run.bat" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
