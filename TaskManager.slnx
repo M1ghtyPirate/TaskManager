@@ -4,7 +4,7 @@
     <File Path=".gitignore" />
     <File Path="README.md" />
   </Folder>
-  <Project Path="TakManager/TakManager.pyproj" Type="888888a0-9f3d-457c-b088-3a5042f75d52" Id="2cf620d4-e531-4022-8dcb-f29b6da80ac4">
+  <Project Path="TaskManager/TaskManager.pyproj" Type="888888a0-9f3d-457c-b088-3a5042f75d52" Id="2cf620d4-e531-4022-8dcb-f29b6da80ac4">
     <Build Project="false" />
   </Project>
 </Solution>
